@@ -3,4 +3,6 @@
 #ifndef OPTION_ONE_LOCK
 #define OPTION_ONE_LOCK
 
+using namespace std;
+
 #endif
