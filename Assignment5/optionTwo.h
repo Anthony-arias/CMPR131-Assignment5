@@ -273,7 +273,8 @@ void insertAfterIterators(list<student>& studentList)
     list<student>::iterator it;
     student s;
     it = studentList.begin();
-    ++it;
+    if (!studentList.empty())
+        ++it;
     s.setName(inputString("\n\t\tEnter a new student name: ", true));
     int grade = inputInteger("\n\t\tEnter the his/her level (1-Freshman, 2-Sophmore, 3-Junior, or 4-Senior): ", 1, 4);
     string gradeLevel[4] = { "Freshman","Sophmore","Junior","Senior"};
