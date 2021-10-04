@@ -55,8 +55,6 @@ void displayOptionOneMenu(void)
 //PostCondition: displays option two menu options
 void displayOptionTwoMenu(void)
 {
-    cout << "\n\tLists are sequence containers that allow constant time insert and erase operations anywhere within the";
-    cout << "\n\tsequence, and iteration in both directions." << endl;
     cout << "\n\t2> List container" << endl;
     cout << "\t" + string(100, char(205)) << endl;
     cout << "\t\tA> clear() - Destroys all elements from the list" << endl;
