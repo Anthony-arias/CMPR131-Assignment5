@@ -68,7 +68,7 @@ void readfile(list<student>& studentList, char option)
         }
         source.close();
        
-        cout << "\n\t\tThe list now has " << studentList.size() << " elements." << endl;
+        cout << "\n\t\tThe list now has " << studentList.size() << " element(s)." << endl;
     }
 
 }
@@ -100,7 +100,7 @@ void resize(list<student>& studentList)
 {
     int size = inputInteger("\n\t\tEnter the new size(1..100): ", 0, 100);
     studentList.resize(size);
-    cout << "\n\t\tThe list has been resized to " << studentList.size() << " elements" << endl;
+    cout << "\n\t\tThe list has been resized to " << studentList.size() << " element(s)." << endl;
 }
 
 //pop_front() - Deletes the first element
@@ -112,7 +112,7 @@ void deleteFirst(list<student>& studentList)
     {
         cout << "\n\t\tFirst element,(" << studentList.front() << "), has been removed from the list." << endl;
         studentList.pop_front();
-        cout << "\n\t\tThe list now has " << studentList.size() << " elements." << endl;
+        cout << "\n\t\tThe list now has " << studentList.size() << " element(s)." << endl;
         display(studentList);
     }
 }
@@ -126,7 +126,7 @@ void deleteLast(list<student>& studentList)
     {
         cout << "\n\t\tLast element,(" << studentList.back() << "), has been removed from the list." << endl;
         studentList.pop_back();
-        cout << "\n\t\tThe list now has " << studentList.size() << " elements." << endl;
+        cout << "\n\t\tThe list now has " << studentList.size() << " element(s)." << endl;
         display(studentList);
     }
 }
@@ -284,4 +284,29 @@ void insertAfterIterators(list<student>& studentList)
     cout << "\n\t\tThe new element has been inserted after the begin iterator." << endl;
 
 }
+
+//swap() - Exchanges the content of the container by another list's content of the same type
+void swapTwoLists(list<student>& l1)
+{
+    list<student> l2;   
+    cout << "\n\t\tList (l2) is initially empty." << endl;
+    l1.swap(l2);
+    if(l1.empty())
+        cout << "\n\t\tList (l1) is empty after swapped with list (l2)." << endl;
+    cout << "\n\t\tList (l2) now has " << l2.size() << " element(s):" << endl;
+    display(l2);
+
+}
+
+//Sort - Sorts the list.
+void sortList(list<student>& studentList)
+{
+
+    list<student>::iterator it;
+    studentList.sort();
+
+    display(studentList);
+
+}
+
 #endif

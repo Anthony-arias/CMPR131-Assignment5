@@ -126,8 +126,8 @@ void programTwo(void)
         case 'o': case 'O': removeUsingIterator(studentList);  break;
         case 'p': case 'P': removeAllUsingIterators(studentList);  break;
         case 'q': case 'Q': insertAfterIterators(studentList);  break;
-        case 'r': case 'R': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 's': case 'S':  display(studentList); pause("\n\t\tPress enter to continue...");  break;
+        case 'r': case 'R': swapTwoLists(studentList);  break;
+        case 's': case 'S': sortList(studentList); break;
         default: cout << "\t\tERROR-1A: Invalid input. Must be '0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', or 'S'" << endl;
             pause("\n\t\tPress enter to continue...");
         }
