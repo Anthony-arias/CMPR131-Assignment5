@@ -55,9 +55,10 @@ void mainMenu(void)
 //PostCondition:
 void programOne(void)
 {
+    cout << "\n\tVectors are sequence containers representing arrays that can change in size.\n";
+    vector<student> studentVector;
     do
     {
-        clearScreen();
         displayOptionOneMenu();
 
         int option = inputChar("\t\tOption: ");
@@ -65,25 +66,25 @@ void programOne(void)
         switch (option)
         {
         case '0': return;
-        case 'a': case 'A': /*Function here*/ pause("\n\t\tPress enter to continue..."); break;
-        case 'b': case 'B': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'c': case 'C': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'd': case 'D': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'e': case 'E': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'f': case 'F': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'g': case 'G': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'h': case 'H': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'i': case 'I': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'j': case 'J': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'k': case 'K': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'l': case 'L': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'm': case 'M': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'n': case 'N': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'o': case 'O': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'p': case 'P': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'q': case 'Q': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'r': case 'R': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 's': case 'S': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
+        case 'a': case 'A': clear(studentVector); break;
+        case 'b': case 'B': reserve(studentVector); break;
+        case 'c': case 'C': resize(studentVector); break;
+        case 'd': case 'D': readFile(studentVector); break;
+        case 'e': case 'E': pop_back(studentVector); break;
+        case 'f': case 'F': front(studentVector); break;
+        case 'g': case 'G': back(studentVector); break;
+        case 'h': case 'H': indexUsingSymbol(studentVector); break;
+        case 'i': case 'I': begin(studentVector); break;
+        case 'j': case 'J': end(studentVector); break;
+        case 'k': case 'K': begin_and_end_iterator(studentVector); break;
+        case 'l': case 'L': rbegin(studentVector); break;
+        case 'm': case 'M': rend(studentVector); break;
+        case 'n': case 'N': rbegin_and_rend_iterator(studentVector); break;
+        case 'o': case 'O': eraseSingleElement(studentVector); break;
+        case 'p': case 'P': eraseWithinRange(studentVector); break;
+        case 'q': case 'Q': insert(studentVector); break;
+        case 'r': case 'R': swap(studentVector); break;
+        case 's': case 'S': sort(studentVector); break;
         default: cout << "\t\tERROR-1A: Invalid input. Must be '0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', or 'S'" << endl;
             pause("\n\t\tPress enter to continue...");
         }
