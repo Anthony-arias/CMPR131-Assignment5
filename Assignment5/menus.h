@@ -23,7 +23,7 @@ void displayMainMenu(void)
 //PostCondition: displays option one menu options
 void displayOptionOneMenu(void)
 {
-    cout << "\n\tVectors are sequence containers representing arrays that can change in size." << endl;
+    //cout << "\n\tVectors are sequence containers representing arrays that can change in size." << endl;
     cout << "\n\t1> Vector's member functions" << endl;
     cout << "\t" + string(100, char(205)) << endl;
     cout << "\t\tA> clear() - Removes all elements from the vector (which are destroyed)" << endl;
