@@ -99,6 +99,10 @@ void readFile(vector<student>& studentVector)
 				}
 			}
 		}
+		if (studentVector.size() == 1)
+			cout << "\n\tThe vector now has " << studentVector.size() << " element.\n";
+		else
+			cout << "\n\tThe vector now has " << studentVector.size() << " elements.\n";
 		display(studentVector);
 	}
 }
