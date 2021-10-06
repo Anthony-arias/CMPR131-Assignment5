@@ -60,7 +60,6 @@ void programOne(void)
     do
     {
         displayOptionOneMenu();
-
         int option = inputChar("\t\tOption: ");
 
         switch (option)
