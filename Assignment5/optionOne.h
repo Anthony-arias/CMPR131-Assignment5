@@ -10,7 +10,6 @@
 #include <vector>
 #include "input.h"
 #include "Student.h"
-#include <list>
 using namespace std;
 
 // Functions prototype
