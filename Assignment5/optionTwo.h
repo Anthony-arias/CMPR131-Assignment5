@@ -302,7 +302,6 @@ void swapTwoLists(list<student>& l1)
 void sortList(list<student>& studentList)
 {
 
-    list<student>::iterator it;
     studentList.sort();
 
     display(studentList);
