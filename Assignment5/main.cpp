@@ -12,7 +12,7 @@
 #include "input.h"
 #include "menus.h"
 #include <list>
-#include<iomanip>
+#include <iomanip>
 
 
 void mainMenu(void);
@@ -52,7 +52,7 @@ void mainMenu(void)
 }
 
 //PreCondition: NA
-//PostCondition:
+//PostCondition: executes different programs in program one
 void programOne(void)
 {
     cout << "\n\tVectors are sequence containers representing arrays that can change in size.\n";
@@ -92,7 +92,7 @@ void programOne(void)
 
 
 //PreCondition: NA
-//PostCondition:
+//PostCondition: executes different programs in program two
 void programTwo(void)
 {
     list<student> studentList;
@@ -135,9 +135,11 @@ void programTwo(void)
 }
 
 //PreCondition: NA
-//PostCondition:
+//PostCondition: executes different programs in program three
 void programThree(void)
 {
+    list<int> intList;
+
     do
     {
         clearScreen();
@@ -148,10 +150,10 @@ void programThree(void)
         switch (option)
         {
         case '0': return;
-        case 'a': case 'A': /*Function here*/ pause("\n\t\tPress enter to continue..."); break;
-        case 'b': case 'B': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'c': case 'C': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
-        case 'd': case 'D': /*Function here*/ pause("\n\t\tPress enter to continue...");  break;
+        case 'a': case 'A': addInteger(intList); break;
+        case 'b': case 'B': deleteIneger(intList); pause("\n\t\tPress enter to continue...");  break;
+        case 'c': case 'C': displayIntList(intList); pause("\n\t\tPress enter to continue...");  break;
+        case 'd': case 'D': displayFrequencies(intList); pause("\n\t\tPress enter to continue...");  break;
         default: cout << "\t\tERROR-1A: Invalid input. Must be '0','A','B','C', or 'D'" << endl;
             pause("\n\t\tPress enter to continue...");
         }
